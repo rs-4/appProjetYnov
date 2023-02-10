@@ -72,7 +72,7 @@ exports.createMission = async (req, res) => {
         }); 
         var mailOpitons = {
           from: ` <appvaultdev@gmail.com>`,
-          to: re,
+          to: "rayansemi100@gmail.com",
           subject: "Mission has been find for u ",
           html: `<h2> ${aray.firstName} we have find mission for u !</h2>
                  <a>Mission Spec :
@@ -83,7 +83,7 @@ exports.createMission = async (req, res) => {
                   mission end date : ${missionId.EndDate}
                  </a>
                  <a>if u want to accept this mission please click on this link : http://localhost:3000/service/acceptMission/${re}/${missionId._id}</a> 
-                 <a style={color:red}>if u want to refuse this mission please click on this link : http://localhost:3000/service/refuseMission/${re}/${missionId._id}</a>
+                 <a>if u want to refuse this mission please click on this link : http://localhost:3000/service/refuseMission/${re}/${missionId._id}</a>
                  
                  
                  `,};   
@@ -93,11 +93,15 @@ exports.createMission = async (req, res) => {
                   } else {
                     console.log(" email sent");
                   }
-                });
+                });   
+                console.log(re)
       });
 
+    
     });
 
+
+ 
 const hash="http://localhost:3000/service/acceptMission"
 const pending=  "pending"
     const newProposition = new Proposition({

@@ -5,7 +5,11 @@ const propositionSchema = mongoose.Schema({
    _idSociety:{
     type: String,
     required: true
-    },
+    },  
+    _idMission:{
+      type: String,
+      required: true
+      },
     _idFreelance:{
       type: Array,
     },

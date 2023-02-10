@@ -96,7 +96,8 @@ exports.login = (req, res) => {
         isAdmin:user.isAdmin,
         statusAccount:user.statusAccount
         },"test"
-      )
+       
+      ) 
       res.send({
         message: "User logged",
         auth: true,
